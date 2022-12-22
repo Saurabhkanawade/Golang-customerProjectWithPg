@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/Saurabhkanawade/golang-practice/helper"
 	"github.com/Saurabhkanawade/golang-practice/router"
 	"github.com/joho/godotenv"
 	_ "github.com/joho/godotenv/autoload"
@@ -13,7 +12,10 @@ func main() {
 	log.Println("Starting the server on 9000.....................")
 
 	err := godotenv.Load("app.env")
-	helper.CheckErrorNill(err)
+
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	log.Println("godotenv log in main()............")
 
