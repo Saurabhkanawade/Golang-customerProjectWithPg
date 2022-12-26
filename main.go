@@ -22,7 +22,7 @@ func main() {
 	route := router.Router()
 
 	// Starting Server
-	log.Fatal(http.ListenAndServe(":8000", route))
+	log.Fatal(http.ListenAndServe(":9000", route))
 
 	//db := database.Connect()
 	//defer db.Close()

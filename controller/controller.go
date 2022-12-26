@@ -176,6 +176,6 @@ func DeleteCustomerById(w http.ResponseWriter, r *http.Request) {
 }
 func checkNilError(err error) {
 	if err != nil {
-		log.Fatal(err)
+		log.Panic(err)
 	}
 }

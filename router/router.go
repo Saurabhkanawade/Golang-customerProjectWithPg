@@ -9,7 +9,8 @@ func Router() *mux.Router {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/api/customers", controller.CreateCustomer).Methods("POST")
+	//router.HandleFunc("/api/customers", controller.CreateCustomer).Methods("POST", "GET")
+	router.HandleFunc("/api/customers", controller.GetCustomers).Methods("POST")
 	router.HandleFunc("/api/customers", controller.GetCustomers).Methods("GET")
 	router.HandleFunc("/api/customers/{id}", controller.GetCustomerById).Methods("GET")
 	router.HandleFunc("/api/customers/{id}", controller.UpdateCustomerById).Methods("PUT")

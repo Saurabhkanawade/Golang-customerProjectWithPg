@@ -18,6 +18,7 @@ func Connect() *pg.DB {
 		Database: os.Getenv("DB_DATABASE"),
 	}
 
+	// most important thing
 	var db *pg.DB = pg.Connect(opts)
 
 	if db == nil {
